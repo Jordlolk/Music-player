@@ -1,4 +1,4 @@
-.playlist{
+.playlist {
   overflow: hidden;
   border-radius: 20px;
   border: solid 4px var(--blue);
@@ -8,7 +8,7 @@
   padding: 20px;
   color: var(--white);
   flex-direction: column;
-  animation: ede 2s forwards;
+  animation: ded 2s forwards;
 }
 
 .playlist div {
@@ -86,7 +86,7 @@
   border: none;
   border-radius: 2px;
   cursor: pointer;
-  transform: translateX(25px);
+  /* transform: translateX(25px); */
   transition: background-color 0.3s;
   position: relative;
 }
@@ -111,13 +111,13 @@
     margin-left: 0%;
   }
   100% {
-    margin-left: 58%;
+    margin-left: 55%;
   }
 }
 
 @keyframes ede {
   0% {
-    margin-left: 58%;
+    margin-left: 57%;
   }
   100% {
     margin-left: 0%;
