@@ -1,0 +1,125 @@
+.playlist{
+  overflow: hidden;
+  border-radius: 20px;
+  border: solid 4px var(--blue);
+  background-color: rgb(17, 17, 17);
+  display: flex;
+  max-width: 400px;
+  padding: 20px;
+  color: var(--white);
+  flex-direction: column;
+  animation: ede 2s forwards;
+}
+
+.playlist div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playlist ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+  gap: 1rem;
+  text-align: center;
+  padding: 8px;
+  max-height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.playlist li {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  overflow: hidden;
+  padding: 28px;
+  cursor: pointer;
+  text-shadow: 1px 1px 10px var(--blue);
+  position: relative;
+}
+
+.playlist li:not(:hover) {
+  scale: 1.1;
+  text-shadow: 1px 1px 10px red;
+  transition: 100ms ease-in-out;
+}
+
+.playlist li:last-child::after {
+  display: none;
+}
+
+.playlist ul::-webkit-scrollbar {
+  width: 12px; /* Largura da barra de rolagem */
+}
+
+.playlist ul::-webkit-scrollbar-track {
+  background: #f1f1f100; /* Cor do track (fundo da barra de rolagem) */
+}
+
+.playlist ul::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to top,
+    rgb(138, 0, 0),
+    rgb(0, 0, 130)
+  ); /* Cor do polegar (parte rolável da barra de rolagem) */
+  border-radius: 50px; /* Cantos arredondados */
+}
+
+.playlist ul::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to top, red, var(--blue));
+}
+
+.playlistButton {
+  display: inline-flex;
+  align-items: center;
+  height: 90px;
+  width: 25px;
+  font-size: 16px;
+  color: var(--white);
+  border: solid var(--blue) 4px;
+  background-color: var(--blue);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transform: translateX(25px);
+  transition: background-color 0.3s;
+  position: relative;
+}
+
+.playlistButton:hover {
+  background-color: var(--red);
+}
+
+.arrow {
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #fff;
+  margin-left: 8px;
+}
+
+@keyframes ded {
+  0% {
+    margin-left: 0%;
+  }
+  100% {
+    margin-left: 58%;
+  }
+}
+
+@keyframes ede {
+  0% {
+    margin-left: 58%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}

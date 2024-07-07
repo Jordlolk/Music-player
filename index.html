@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="public/styles/style.css">
+    <link rel="stylesheet" href="public/styles/playlist.css">
+    <link rel="stylesheet" href="public/styles/player.css">
     <script src="https://kit.fontawesome.com/e6b2116c55.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <main class="main-content">
+        <section class="playlist">
+            <div>
+                <img class="imgAlbum02" src="public/img/Luffy.jpg" alt="album-photo" id="firstPhoto">
+                <uL data-musicList="musics">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </uL>
+            </div>
+        </section>
+        <button class="playlistButton" id="callPlaylist"><span class="arrow"></span></button>
         <section class="player">
             <div class="display">
                 <nav class="menu">
@@ -20,22 +35,20 @@
                     </div>                    
                 </nav>
                 <div class="album-photo">
-                    <img class="imgAlbum01" src="./public/img/one-piece-5k-aso8neto2qam0ope.jpg" alt="">
+                    <img class="imgAlbum01" src="./public/img/Luffy.jpg" alt="album-photo" id="secondPhoto">
                         <div class="allNames">
-                            <h1 class="musicName">One Piece Op 02</h1>
-                            <h2 class="artistName">Oda Gênio</h2>
+                            <h1 class="musicName" id="musicName">Choose the music</h1>
                         </div>
                 </div>
                 <div class="control">
                     <audio id="audioPlayer">
-                        <source src="./musics/OnePiece.mp3" type="audio/mp3">
+                        <source src="" type="audio/mp3">
                     </audio>
                     <div id="progressDiv">
                         <input type="range" value="0" id="progress">
                     </div>
                     <div class="buttons">
                         <i class="fa-solid fa-backward" data-buttom="one"></i>
-                       <!--  <i class="fa-solid fa-pause"></i> -->
                         <i onclick="playPause()" class="fa-solid fa-play" id="ctrlIcon"></i>
                         <i class="fa-solid fa-forward" data-buttom='two'></i>
                     </div>
