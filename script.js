@@ -95,6 +95,16 @@ test.forEach((item) => {
 })
 let playlist = document.getElementsByClassName("playlist")[0]
 let playlistButton = document.getElementById("callPlaylist")
+let initEvent = true
 playlistButton.addEventListener("click", (e) => {
-    console.log(playlist);
+    if(initEvent){
+      playlist.style.animation = "goRight 1s forwards"
+      playlistButton.style.animation = "goLeftButton 1s forwards"
+      initEvent = false
+    }else{
+      playlist.style.animation = "goLeft 1s forwards"
+      playlistButton.style.animation = "goRightButton 1s forwards"
+      initEvent = true
+    }
+    console.log(initEvent);
 })

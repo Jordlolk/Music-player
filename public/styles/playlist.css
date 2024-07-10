@@ -4,11 +4,10 @@
   border: solid 4px var(--blue);
   background-color: rgb(17, 17, 17);
   display: flex;
-  max-width: 400px;
-  padding: 20px;
+  max-width: 300px;
+  padding: 30px;
   color: var(--white);
   flex-direction: column;
-  animation: ded 2s forwards;
 }
 
 .playlist div {
@@ -23,9 +22,9 @@
   align-items: center;
   width: 100%;
   list-style: none;
-  gap: 1rem;
+  gap: 1.4rem;
   text-align: center;
-  padding: 8px;
+  padding: 18px;
   max-height: 200px;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -58,15 +57,11 @@
 }
 
 .playlist ul::-webkit-scrollbar-track {
-  background: #f1f1f100; 
+  background: #f1f1f100;
 }
 
 .playlist ul::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    to top,
-    rgb(138, 0, 0),
-    rgb(0, 0, 130)
-  );
+  background: linear-gradient(to top, rgb(138, 0, 0), rgb(0, 0, 130));
   border-radius: 50px;
 }
 
@@ -78,7 +73,7 @@
   display: inline-flex;
   align-items: center;
   height: 90px;
-  width: 25px;
+  width: 30px;
   font-size: 16px;
   color: var(--white);
   border: solid var(--blue) 4px;
@@ -86,8 +81,8 @@
   border: none;
   border-radius: 2px;
   cursor: pointer;
-  /* transform: translateX(25px); */
-  transition: background-color 0.3s;
+  transition: 0.3s ease-in-out;
+  animation: goRightButton 1s forwards;
   position: relative;
 }
 
@@ -106,20 +101,43 @@
   margin-left: 8px;
 }
 
-@keyframes ded {
+@keyframes goRight {
   0% {
     margin-left: 0%;
   }
   100% {
-    margin-left: 55%;
+    margin-left: 50%;
   }
 }
 
-@keyframes ede {
+@keyframes goLeft {
   0% {
-    margin-left: 57%;
+    margin-left: 50%;
   }
   100% {
     margin-left: 0%;
+  }
+}
+
+@keyframes goLeftButton {
+  0% {
+    transform: translateX(30px);
+  }
+  10% {
+    transform: translateX(0px);
+  }
+}
+@keyframes goRightButton {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  90% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
